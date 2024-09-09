@@ -1,0 +1,97 @@
+/* Resetting body margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Full-screen carousel */
+  .carousel {
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    overflow: hidden;
+    background-color: #00b894;
+  }
+  
+  .carousel-slide {
+    display: none;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    color: white;
+  }
+  
+  .carousel-slide.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .slide-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .slide-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Section below carousel */
+  .content-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    background-color: #fbfcfc;
+    color: rgb(15, 15, 15);
+    padding: 2rem 0;
+    margin-top: -1px; /* To remove the white space between carousel and content */
+  }
+  
+  .content-box {
+    text-align: center;
+    width: 30%;
+  }
+  
+  .circle {
+    width: 150px;
+    height: 150px;
+    background-color: #6c757d;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+  }
+  
+  .content-box h5 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  .circle-image {
+    width: 140px; /* Smaller size */
+    height: 140px; /* Smaller size */
+    border-radius: 50%;
+    object-fit: cover; /* Ensure image covers the circle */
+    margin-bottom: 10px;
+    border: 2px solid black; /* Add this line */
+}
+
+  
+  
+  .content-box p {
+    font-size: 1rem;
+  }
+  
