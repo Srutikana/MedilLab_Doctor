@@ -1,0 +1,119 @@
+/* Keeping the original chat window styling unchanged */
+.chat-window {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+/* Updated header bar styling */
+.chat-header {
+    display: flex;
+    justify-content: space-between;  /* Align content to the left and right */
+    align-items: center;  /* Vertically center the profile picture and text */
+    padding: 10px 15px;  /* Slightly more padding for balance */
+    background-color: #00b894;
+    color: white;
+    font-size: 18px;  /* Set font size similar to WhatsApp */
+    font-weight: bold;
+    height: 60px;  /* Set a fixed height to prevent the header from growing */
+}
+
+/* Left side of the header (name and profile picture) */
+.chat-header .header-left {
+    display: flex;
+    align-items: center;  /* Vertically center name and profile picture */
+    gap: 10px;  /* Space between the name and the profile picture */
+}
+
+/* Name styling */
+.chat-header span {
+    font-size: 18px;  /* Name font size */
+    font-weight: normal;  /* Normal weight for the name */
+    color: white;  /* Keep name white */
+}
+
+/* Profile picture styling */
+.chat-header .profile-pic {
+    width: 35px;  /* Profile pic size */
+    height: 35px;  /* Profile pic size */
+    border-radius: 50%;  /* Circular profile pic */
+    object-fit: cover;  /* Ensures proper cropping of image */
+    border: 2px solid white;  /* Optional: add a border around the profile pic */
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f5f5f5;
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 16px;
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #dff7e2;
+}
+
+.bot-message {
+    align-self: flex-start;
+    background-color: #f1f1f1;
+}
+
+.chat-footer {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+}
+
+.chat-input {
+    width: 85%;
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.send-btn {
+    margin-left: 10px;
+    padding: 12px 20px;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.send-btn:hover {
+    background-color: #019d7e;
+}
+
+.close-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}

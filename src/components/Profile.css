@@ -1,0 +1,145 @@
+/* /* Ensure container takes up full viewport width and height */
+.personal-info-container {
+    max-width: 100%;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: #00b894; /* Set background color */
+    padding: 40px; /* Increase padding for better spacing */
+    box-sizing: border-box; /* Include padding in the width and height calculations */
+    border-radius: 0; /* Keep container edges flush with the screen */
+    box-shadow: none; /* Remove any shadow */
+    overflow-y: auto; /* Allow vertical scrolling if content overflows */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the content */
+    align-items: center; /* Horizontally center the content */
+}
+
+.header {
+    display: flex;
+    flex-direction: column; /* Stack profile picture and details vertically */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    margin-bottom: 10px;
+    margin-top: 180px; /* Add space between the picture and details */
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.profile-details {
+    text-align: center; /* Center the profile details */
+}
+
+.profile-details h2 {
+    margin: 0;
+    font-size: 24px; /* Increase font size for better visibility */
+    color: white; /* Make the profile name stand out */
+}
+
+.add-designation {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: white; /* Set subtitle color to white for better contrast */
+}
+
+.personal-info-form {
+    margin-top: 5px;
+    width: 100%; /* Full width form */
+    max-width: 500px; /* Limit the width of the form */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increase margin for better spacing */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px; /* Increase label bottom margin for better spacing */
+    font-size: 16px;
+    font-weight: bold; /* Make the label text bold */
+    color: #333; /* Set label text color */
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px; /* Increase padding for better input field feel */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* Make inputs slightly more rounded */
+}
+
+.change {
+    margin-left: 10px;
+    font-size: 12px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px; /* Increase padding for larger inputs */
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px; /* Make text inside the input larger */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Ensure dropdown expands downward */
+select {
+    position: relative; /* Ensure proper dropdown positioning */
+    z-index: 10; /* Ensure dropdown is above other elements */
+    background-color: #fff; /* Set background color */
+    cursor: pointer; /* Change cursor to indicate interactiveness */
+}
+
+/* Style for dropdown options */
+select option {
+    padding: 8px; /* Add padding for better readability */
+}
+
+/* Style for read-only input fields */
+input[readonly] {
+    background-color: #f9f9f9;
+    cursor: not-allowed; /* Add cursor feedback for read-only fields */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .personal-info-container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    .profile-img {
+        width: 100px; /* Reduce the size of the profile image */
+        height: 100px;
+    }
+
+    .profile-details h2 {
+        font-size: 20px; /* Reduce font size for smaller screens */
+    }
+
+    .personal-info-form {
+        width: 90%; /* Reduce form width for smaller screens */
+        padding: 15px;
+    }
+}

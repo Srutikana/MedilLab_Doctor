@@ -1,3 +1,4 @@
+// 
 import React, { useContext } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';  // Adjust the import path
@@ -7,8 +8,8 @@ function Navbar() {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    logout();
-    navigate('/');
+    logout();  // Set isLoggedIn to false
+    navigate('/');  // Redirect to home page after logout
   };
 
   return (
@@ -23,13 +24,18 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/">Home</Link>
             </li>
+
+            {/* Conditional rendering based on isLoggedIn */}
             {isLoggedIn ? (
               <>
                 <li className="nav-item">
                   <Link className="nav-link" to="/appointments">Appointments</Link>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#" onClick={handleLogout}>Logout</a>
+                  <Link className="nav-link" to="/profile">Profile</Link>
+                </li>
+                <li className="nav-item">
+                  <button className="nav-link btn" onClick={handleLogout}>Logout</button>
                 </li>
               </>
             ) : (
@@ -38,7 +44,7 @@ function Navbar() {
                   <Link className="nav-link" to="/login">Login</Link>
                 </li>
                 <li className="nav-item">
-                  <Link className="nav-link" to="/signup">SignUp</Link>
+                  <Link className="nav-link" to="/signup">Signup</Link>
                 </li>
               </>
             )}
