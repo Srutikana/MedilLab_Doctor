@@ -5,7 +5,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-import AppointmentScreen from './components/Appoinment';
+import AppointmentScreen from './components/Doctorappoinment';
 import Profile from './components/Profile';  // Import the Profile component
 import DoctorPrescriptionForm from './components/DoctorPrescriptionForm'; // Import the new component
 import PatientProfile from './components/PatientProfile';
